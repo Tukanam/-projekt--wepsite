@@ -34,13 +34,73 @@
         </li>
     </ul>
 
-    <img src="img/bild3.jpg" width="300" alt="Ein wunderschöner Ausblick" title="Ein wunderschöner Ausblick">
+    <img src="img/Bergbild.jpg" width="300" alt="Ein wunderschöner Ausblick" title="Ein wunderschöner Ausblick">
 
+    <!-- Aufgabe 1: Verlinkte Checkliste -->
     <h2>Linz-Checkliste</h2>
     <ul>
-        <li>Ars Electronica besuchen</li>
-        <li>Lentos Kunstmuseum erkunden</li>
-        <li>LASK-Spiel anschauen</li>
+        <li>
+            <a href="https://www.pöstlingberg.at" target="_blank" rel="noopener noreferrer">
+                Pöstlingberg
+            </a>
+        </li>
+        <li>
+            <a href="https://www.schlossmuseum.at" target="_blank" rel="noopener noreferrer">
+                Schlossmuseum
+            </a>
+        </li>
+        <li>
+            <a href="https://www.lentos.at" target="_blank" rel="noopener noreferrer">
+                Lentos Kunstmuseum
+            </a>
+        </li>
+    </ul>
+
+    <!-- Aufgabe 2: Stundenplan -->
+    <h2>Mein Stundenplan – Montag</h2>
+    <table border="1">
+        <tr>
+            <th>Zeit</th>
+            <th>Fach</th>
+        </tr>
+        <tr>
+            <td>08:00 – 08:50</td>
+            <td>Mathematik</td>
+        </tr>
+        <tr>
+            <td>09:00 – 09:50</td>
+            <td>Deutsch</td>
+        </tr>
+        <tr>
+            <td>10:10 – 11:00</td>
+            <td>Informatik</td>
+        </tr>
+    </table>
+
+    <!-- Aufgabe 3: Verschachtelte Liste – Top 3 Clubs -->
+    <h2>Top 3 Clubs der 1. Ligen</h2>
+    <ul>
+        <li>Österreich (Admiral Bundesliga, Stand: 28. Runde)
+            <ol>
+                <li>Sturm Graz</li>
+                <li>RB Salzburg</li>
+                <li>LASK</li>
+            </ol>
+        </li>
+        <li>Deutschland (Bundesliga)
+            <ol>
+                <li>Bayern München</li>
+                <li>Borussia Dortmund</li>
+                <li>RB Leipzig</li>
+            </ol>
+        </li>
+        <li>England (Premier League)
+            <ol>
+                <li>Manchester City</li>
+                <li>Arsenal FC</li>
+                <li>Manchester United</li>
+            </ol>
+        </li>
     </ul>
 
     <!-- Teil A: Lokale dynamische Liste -->
@@ -48,15 +108,15 @@
     <ul id="liste-linz"></ul>
 
     <script>
-  // Teil A: Lokale Daten
-  const stadtteile = ["Urfahr", "Innere Stadt", "Bindermichel"];
-  const liste = document.getElementById("liste-linz");
-  stadtteile.forEach(s => {
-    let li = document.createElement("li");
-    li.textContent = s;
-    liste.appendChild(li);
-  });
-</script>
+        // Teil A: Lokale Daten
+        const stadtteile = ["Urfahr", "Innere Stadt", "Bindermichel"];
+        const liste = document.getElementById("liste-linz");
+        stadtteile.forEach(s => {
+            let li = document.createElement("li");
+            li.textContent = s;
+            liste.appendChild(li);
+        });
+    </script>
 
     <a href="#top">Zurück nach oben</a>
 

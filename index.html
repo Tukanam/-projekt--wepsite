@@ -1,52 +1,64 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-   Code der index.html Datei<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <h1 id="top">Meine Linz-Seite</h1>
-    <title>Meine erste Website</title>
-</head>
-<body>
-
-<h1>Hallo Welt!</h1>
-<p>Das ist meine erste eigene Webseite.</p>
-
-</body>
-</html>
- <img src="img/bild1.jpg" width="400">
-<a href="https://www.tools-n-trinkets.at/">www.tools-n-trinkets.at Tolle Seite!!!</a>
-<h2>Die Linz Galerie</h2>
-<ul>
-  <li>
-    <a href="https://ars.electronica.art" target="_blank" rel="noopener noreferrer">
-      Ars Electronica
-    </a>
-  </li>
-  <li>
-    <a href="https://www.lask.at" target="_blank" rel="noopener noreferrer">
-      LASK
-    </a>
-  </li>
-  <li>
-    <a href="https://www.lentos.at" target="_blank" rel="noopener noreferrer">
-      Lentos Kunstmuseum
-    </a>
-  </li>
-</ul>
-<img src="img/Bergbild.jpg" width="300" alt="Ein wunderschöner Ausblick" title="Ein wunderschöner Ausblick">
- <a href="#top">Zurück nach oben</a>
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Meine Aufgaben</title>
+    <title>Meine Linz-Seite</title>
 </head>
 <body>
 
-    <h1>Linz-Checkliste</h1>
-    <ul>
+    <h1 id="top">Meine Linz-Seite</h1>
 
+    <h2>Hallo Welt!</h2>
+    <p>Das ist meine erste eigene Webseite.</p>
+
+    <img src="img/bild1.jpg" width="400" alt="Bild Linz">
+
+    <a href="https://www.tools-n-trinkets.at/">www.tools-n-trinkets.at – Tolle Seite!!!</a>
+
+    <h2>Die Linz Galerie</h2>
+    <ul>
+        <li>
+            <a href="https://ars.electronica.art" target="_blank" rel="noopener noreferrer">
+                Ars Electronica
+            </a>
+        </li>
+        <li>
+            <a href="https://www.lask.at" target="_blank" rel="noopener noreferrer">
+                LASK
+            </a>
+        </li>
+        <li>
+            <a href="https://www.lentos.at" target="_blank" rel="noopener noreferrer">
+                Lentos Kunstmuseum
+            </a>
+        </li>
+    </ul>
+
+    <img src="img/Bergbild.jpg" width="300" alt="Ein wunderschöner Ausblick" title="Ein wunderschöner Ausblick">
+
+    <h2>Linz-Checkliste</h2>
+    <ul>
+        <li>Ars Electronica besuchen</li>
+        <li>Lentos Kunstmuseum erkunden</li>
+        <li>LASK-Spiel anschauen</li>
+    </ul>
+
+    <!-- Teil A: Lokale dynamische Liste -->
+    <h2>Linzer Stadtteile</h2>
+    <ul id="liste-linz"></ul>
+
+    <script>
+        // Teil A: Lokale Daten
+        const stadtteile = ["Urfahr", "Innere Stadt", "Bindermichel"];
+        const liste = document.getElementById("liste-linz");
+        stadtteile.forEach(s => {
+            let li = document.createElement("li");
+            li.textContent = s;
+            liste.appendChild(li);
+        });
+    </script>
+
+    <a href="#top">Zurück nach oben</a>
+
+</body>
+</html>

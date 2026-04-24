@@ -118,6 +118,46 @@
         });
     </script>
 
+    <!-- Teil B: Daten per Servicecall laden -->
+    <h2>User-Liste vom Server</h2>
+    <ul id="service-liste"></ul>
+
+    <script>
+        // Teil B: Daten vom Server laden (Servicecall)
+        const fakeUsers = [
+            { name: "Leanne Graham" },
+            { name: "Ervin Howell" },
+            { name: "Clementine Bauch" },
+            { name: "Patricia Lebsack" },
+            { name: "Chelsey Dietrich" },
+            { name: "Mrs. Dennis Schulist" },
+            { name: "Kurtis Weissnat" },
+            { name: "Nicholas Runolfsdottir V" },
+            { name: "Glenna Reichert" },
+            { name: "Clementina DuBuque" }
+        ];
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json()) // Antwort in JSON umwandeln
+            .then(data => {
+                const sListe = document.getElementById("service-liste");
+                data.forEach(user => {
+                    let li = document.createElement("li");
+                    li.textContent = "User: " + user.name; // Wir greifen auf das Feld 'name' zu
+                    sListe.appendChild(li);
+                });
+            })
+            .catch(() => {
+                // Falls kein Internet: lokale Beispieldaten anzeigen
+                const sListe = document.getElementById("service-liste");
+                fakeUsers.forEach(user => {
+                    let li = document.createElement("li");
+                    li.textContent = "User: " + user.name;
+                    sListe.appendChild(li);
+                });
+            });
+    </script>
+
     <a href="#top">Zurück nach oben</a>
 
 </body>
